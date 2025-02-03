@@ -7,7 +7,14 @@ html,
 body {
   margin: 0;
   color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: wheat;
+  font-size: 1.2rem;
 }
 
 main {
@@ -26,7 +33,7 @@ main > section {
   justify-content: flex-end;
   top: 0;
   position: sticky;
-  gap: 10px;
+  gap: 25px;
   padding: 20px;
   background-color: var(--navbar-color);
 }
@@ -35,11 +42,27 @@ main > section {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 4rem;
   height: 100vh;
   width: 100%;
 }
 
+#hero > span {
+  font-size: larger;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: navajowhite;
+}
+
 footer {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--navbar-color);
   padding: 2rem;
+}
+
+footer > a {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
