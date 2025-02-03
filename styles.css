@@ -1,14 +1,45 @@
-html, body {
-    background-color: #1a1a1a;
+:root {
+  --background-color: #1a1a1a;
+  --navbar-color: rgba(40, 40, 40, 0.95);
+}
+
+html,
+body {
+  margin: 0;
+  color: white;
+  background-color: var(--background-color);
 }
 
 main {
-    display: flex;
-    flex-direction:  column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main > section {
+  height: 50rem;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  position: sticky;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--navbar-color);
 }
 
 #hero {
-    height: 100vh;
-    width: 100%;
-    background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+footer {
+  background-color: var(--navbar-color);
+  padding: 2rem;
 }
