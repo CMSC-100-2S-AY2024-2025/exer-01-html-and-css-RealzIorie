@@ -277,10 +277,10 @@ footer {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer > a {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+footer > span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @keyframes fadeIn {
