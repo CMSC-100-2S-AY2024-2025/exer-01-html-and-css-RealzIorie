@@ -1,3 +1,4 @@
+/* Creation of variables for use */
 :root {
   --marble-white: #f0ead6;
   --marble-gray: #e0d8c0;
@@ -7,6 +8,7 @@
   --marble-texture: url("https://www.transparenttextures.com/patterns/white-texture.png");
 }
 
+/* Universal styles */
 html,
 body {
   margin: 0;
@@ -14,8 +16,10 @@ body {
   font-family: "Cinzel", serif;
   background-color: var(--marble-white);
   background-image: var(--marble-texture);
+  scroll-behavior: smooth;
 }
 
+/* Anchor tag styling */
 a {
   text-decoration: none;
   color: var(--marble-red);
@@ -23,12 +27,12 @@ a {
 }
 
 main {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
+/* Style for each section */
 main > section {
   padding: 1.5rem;
   background-color: var(--marble-white);
@@ -38,12 +42,14 @@ main > section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Style for each section title*/
 main > section > h2 {
   color: var(--marble-red);
   border-bottom: 2px solid var(--marble-gold);
   padding-bottom: 0.5rem;
 }
 
+/* Sticky navbar for whole page navigation */
 #navbar {
   display: flex;
   justify-content: flex-end;
@@ -55,8 +61,10 @@ main > section > h2 {
   background-image: var(--marble-texture);
   border-bottom: 2px solid var(--marble-gold);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999999; /* Ensures navbar remains on top */
 }
 
+/* Hero section styling */
 #hero {
   display: flex;
   flex-direction: column;
@@ -74,32 +82,31 @@ main > section > h2 {
 
 .hero-content {
   max-width: 800px;
-  margin-bottom: 2rem;
   animation: fadeInUp 1.5s ease-in-out;
 }
 
-#hero h1 {
+.hero-content > h1 {
   font-size: 4.5rem;
-  margin-bottom: 1rem;
   color: var(--marble-white);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtitle {
+  margin-top: 3rem;
   font-size: 1.5rem;
   color: var(--marble-white);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   animation: fadeInUp 2s ease-in-out;
 }
 
-.image-holder {
+.hero-profile {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   animation: fadeInUp 2.5s ease-in-out;
 }
 
-.hero-image {
+.hero-profile-image {
   width: 25%;
   height: auto;
   border-radius: 50%;
@@ -108,6 +115,7 @@ main > section > h2 {
   transition: transform 0.3s ease;
 }
 
+/* About section */
 #about {
   display: flex;
   flex-direction: column;
@@ -120,7 +128,7 @@ main > section > h2 {
   animation: fadeInUp 1.5s ease-in-out;
 }
 
-.about__container {
+.about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,9 +136,10 @@ main > section > h2 {
   width: 100%;
 }
 
-.about__stats {
+.about-stats {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   width: 100%;
   animation: fadeIn 1s ease-in-out;
@@ -143,14 +152,14 @@ main > section > h2 {
 }
 
 .stats-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-.about__information {
+.about-information {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 800px;
+  max-width: 900px;
   text-align: center;
 }
 
@@ -168,14 +177,13 @@ main > section > h2 {
 
 .technologies {
   display: flex;
-
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   animation: fadeInUp 1.2s ease-in-out;
 }
 
-.technologies h3 {
+.technologies > h3 {
   font-size: 1.5rem;
   color: var(--marble-red);
   border-bottom: 2px solid var(--marble-gold);
@@ -183,21 +191,25 @@ main > section > h2 {
 }
 
 .tech-icons {
-  width: 5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  max-width: 100%;
 }
 
-.tech-icons img {
-  flex-shrink: 1;
+.tech-icons > img {
+  width: 60px;
+  height: 60px;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .tech-icons img:hover {
   transform: scale(1.2);
 }
 
+/* Projects section */
 #projects {
   padding: 2rem;
   background-color: var(--marble-white);
@@ -205,13 +217,6 @@ main > section > h2 {
   border-radius: 10px;
   margin: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#projects h2 {
-  color: var(--marble-red);
-  border-bottom: 2px solid var(--marble-gold);
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
 }
 
 .project-container {
@@ -233,7 +238,7 @@ main > section > h2 {
 }
 
 .project:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Lift effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -248,13 +253,13 @@ main > section > h2 {
   text-align: center;
 }
 
-.project-content h3 {
+.project-content > h3 {
   font-size: 1.5rem;
   color: var(--marble-dark);
   margin-bottom: 0.5rem;
 }
 
-.project-content p {
+.project-content > p {
   font-size: 1rem;
   color: var(--marble-dark);
   margin-bottom: 1rem;
@@ -274,19 +279,7 @@ main > section > h2 {
   background-color: var(--marble-gold);
 }
 
-#contacts {
-  background-color: var(--marble-white);
-  background-image: var(--marble-texture);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-#contacts > form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
+/* Footer section */
 footer {
   display: flex;
   justify-content: space-between;
@@ -303,6 +296,7 @@ footer > span {
   gap: 1rem;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
